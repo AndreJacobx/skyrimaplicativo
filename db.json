@@ -1,0 +1,20 @@
+{
+  "personagens": [
+    {
+      "id": null,
+      "nome": "Teste",
+      "arma": "Espada",
+      "armadura": "Couro",
+      "magia": "Fogo",
+      "raca": "Humano"
+    },
+    {
+      "id": null,
+      "nome": "Andre",
+      "arma": "Arco",
+      "armadura": "Real",
+      "magia": "Gelo",
+      "raca": "Elfo"
+    }
+  ]
+}
