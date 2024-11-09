@@ -30,7 +30,7 @@ class PersonagemService {
     }
   }
 
-  Future<void> deletePersonagem(int id) async {
+  Future<void> deletePersonagem(String id) async {
     final response = await http.delete(Uri.parse('$apiUrl/$id'));
     if (response.statusCode != 200) {
       throw Exception('Erro ao deletar personagem');

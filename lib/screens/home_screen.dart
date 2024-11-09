@@ -6,11 +6,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Criador de Personagens - Skyrim')),
+      appBar: AppBar(
+        title: const Text('Criador de Personagens - Skyrim'),
+      ),
       body: const Center(
         child: Text(
           'Bem-vindo ao Criador de Personagens Skyrim!',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 20, color: Colors.grey),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

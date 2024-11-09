@@ -45,32 +45,41 @@ class _PersonagemListScreenState extends State<PersonagemListScreen> {
             itemCount: personagens.length,
             itemBuilder: (context, index) {
               final personagem = personagens[index];
-              return ListTile(
-                title: Text(personagem.nome),
-                subtitle: Text('${personagem.raca} - ${personagem.arma}'),
-                trailing: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.edit),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                PersonagemFormScreen(personagem: personagem),
-                          ),
-                        ).then((_) => _refreshList());
-                      },
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.delete),
-                      onPressed: () async {
-                        await _service.deletePersonagem(personagem.id!);
-                        _refreshList();
-                      },
-                    ),
-                  ],
+              return Card(
+                color: Colors.grey[850],
+                child: ListTile(
+                  title: Text(personagem.nome,
+                      style: const TextStyle(color: Colors.grey)),
+                  subtitle: Text(
+                    '${personagem.raca} - ${personagem.arma}',
+                    style: const TextStyle(color: Colors.grey),
+                  ),
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.edit, color: Colors.grey),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  PersonagemFormScreen(personagem: personagem),
+                            ),
+                          ).then((_) => _refreshList());
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.delete, color: Colors.grey),
+                        onPressed: () async {
+                          if (personagem.id != null) {
+                            await _service.deletePersonagem(personagem.id!);
+                            _refreshList();
+                          }
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               );
             },
