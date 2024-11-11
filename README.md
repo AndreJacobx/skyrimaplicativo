@@ -1,16 +1,9 @@
-# aplicativoskyrim
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Criador de Personagens Skyrim
+## Descrição <br>
+Skyrim é um jogo grande com várias raças, armas e magias, onde muitas vezes os jogadores decidem jogar campanhas diferentes com personagens distintos. <br> 
+Esta simples aplicação busca auxiliar novos jogadores de Skyrim a criarem personagens, fornecendo um ambiente visual de edição. <br>
+## Rodando a aplicação
+### 1- Executar o json-server <br>
+json-server --watch db.json <br>
+### 2- Executar aplicação <br>
+flutter run
